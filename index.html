@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Mi Cambio Seguro</title>
+    <link rel="manifest" href="../manifiest.json">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Ícono en la pestaña del navegador -->
+    <link rel="icon" href="../img/logo.webp" type="image/png">
+
+</head>
+<body>
+    <header id="inicio">
+        <!-- Logo de la pagina -->
+        <img src="../img/logo.webp" alt="Logo Mi Cambio Seguro" class="logo">
+        <h1>Mi Cambio Seguro</h1>
+        <nav>
+            <ul>
+                <li><a href="#quienes-somos">¿Quiénes somos?</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#tasas">Tasas de cambio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="quienes-somos">
+  <h2>¿Quiénes somos?</h2>
+  <div class="quienes-contenido">
+     <video controls class="video-presentacion">
+      <source src="../videos/animacion2.mp4" type="video/mp4">
+    </video>
+    <h3>Cambio Sueguro</h3>
+    <p>No sólo ofrecemos un servicio de calidad y eficiencia en la compra y venta de divisas, sino que también somos un equipo apasionado por el 
+       mundo financiero y las oportunidades que hay en el. Nos gusta ver más allá de las monedas y los billetes, es por esto que nos enfocamos en 
+       la conexión que se establece entre personas, culturas y economías. Somos una empresa familiar con una extensa trayectoria en el mercado, comprometida 
+       con la educación financiera y la transparencia en cada una de nuestras operaciones, porque creemos que la confianza es la clave para construir relaciones 
+       comerciales sólidas con nuestros clientes..</p>
+  </div>
+</section>
+
+
+        <section id="servicios">
+  <h2>Servicios</h2>
+  <div class="servicios-contenido">
+    <ul>
+      <li>Cambio de divisas (USD, EUR, GBP)</li>
+      <li>Transferencias internacionales</li>
+      <li>Compra y venta de criptomonedas</li>
+      <li>Servicio al cliente 24/7</li>
+    </ul>
+    <img src="../img/animacion.jpg" alt="Casa de cambio" class="imagen-servicios">
+  </div>
+  <a href="#inicio"><button class="boton-estilo">Subir</button></a>
+</section>
+
+
+        <section class="contacto-ubicacion">
+  <div class="formulario">
+    <h2>Contacto</h2>
+    <form onsubmit="return validarFormulario()">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required><br>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <div class="ubicacion">
+    <h2>Ubicación</h2>
+    <p>Nuestra oficina principal se encuentra en Bogotá, Colombia.</p>
+    <iframe src="https://www.google.com/maps/embed?..." width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <a href="#inicio"><button class="boton-estilo">Subir</button></a>
+
+</section>
+
+        <section id="tasas">
+            <h2>Tasas de Cambio</h2>
+            <p>Ingrese la cantidad en pesos colombianos para convertir a dólares:</p>
+            <input type="number" id="cantidad" placeholder="Monto en COP">
+            <button onclick="convertirMoneda()">Convertir</button>
+            <p id="resultado"></p>
+            <a href="#inicio"><button class="boton-estilo">Subir</button></a>
+             <video controls class="video-tasa">
+             <source src="../videos/monetizador.mp4" type="video/mp4">
+    </video>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Cambio Seguro - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="../worker.js"></script>
+    <script>
+        function convertirMoneda() {
+            const tasaDolar = 3950;
+            let cantidad = parseFloat(document.getElementById("cantidad").value);
+            if (!isNaN(cantidad)) {
+                let resultado = cantidad / tasaDolar;
+                document.getElementById("resultado").innerText = `USD $${resultado.toFixed(2)}`;
+            } else {
+                document.getElementById("resultado").innerText = "Ingrese un valor válido.";
+            }
+        }
+
+        function validarFormulario() {
+            const nombre = document.getElementById("nombre").value;
+            const email = document.getElementById("email").value;
+            const mensaje = document.getElementById("mensaje").value;
+
+            if (!nombre || !email || !mensaje) {
+                alert("Todos los campos son obligatorios.");
+                return false;
+            }
+            alert("Formulario enviado correctamente.");
+            return true;
+        }
+    </script>
+</body>
+</html>

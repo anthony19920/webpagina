@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eceee9;
+  color: #333;
+}
+
+header {
+  background-color: #a6415a;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #0066cc;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+input, textarea, button {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.imagen-banner {
+  display: block;
+  margin:  auto;
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+
+
+.contacto-ubicacion {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.formulario,
+.ubicacion {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+.boton-estilo {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.boton-estilo:hover {
+  background-color: #0066cc;
+}
+
+
+.logo {
+  height: 60px;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.servicios-contenido {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.servicios-contenido ul {
+  flex: 1;
+}
+
+.imagen-servicios {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-video {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.video-presentacion {
+  display: block;
+  margin: 2rem auto 1rem;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-tasa {
+  display: block;
+  margin: 2rem auto 1rem auto;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
