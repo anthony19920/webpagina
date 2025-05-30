@@ -114,13 +114,15 @@ input, textarea, button {
   background-color: #004080;
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.2rem;
   font-size: 1rem;
   border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
   display: inline-block;
+   max-width: 200px;     /* 🔸 limita el tamaño */
+  width: auto;          /* 🔸 no ocupará todo el ancho */
 }
 
 .boton-estilo:hover {
@@ -174,5 +176,26 @@ input, textarea, button {
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#redes-sociales {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.redes-sociales img {
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.redes-sociales img:hover {
+  transform: scale(1.2);
 }
 
