@@ -126,6 +126,19 @@ input, textarea, button {
 }
 
 
+
+.mapa {
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  border: 0;
+  border-radius: 8px;
+  margin: 1rem auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 .boton-estilo {
   background-color: #004080;
   color: white;
