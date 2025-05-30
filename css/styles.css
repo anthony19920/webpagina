@@ -96,20 +96,6 @@ input, textarea, button {
 }
 
 
-
-/*.contacto-ubicacion {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.formulario,
-.ubicacion {
-  flex: 1 1 45%;
-  min-width: 280px;
-}*/
-
 .formulario-contacto {
   max-width: 400px;     /* limita el ancho total del formulario */
   margin: 0 auto;        /* lo centra horizontalmente */
@@ -126,6 +112,17 @@ input, textarea, button {
   border-radius: 6px;
   border: 1px solid #ccc;
   box-sizing: border-box;
+}
+
+.mapa {
+  width: 100%;
+  max-width: 600px;     /* ancho máximo en pantallas grandes */
+  height: 350px;        /* altura para hacerlo más rectangular */
+  display: block;
+  margin: 1rem auto;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
