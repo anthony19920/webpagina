@@ -24,6 +24,7 @@
                 <li><a href="#contacto">Contacto</a></li>
                 <li><a href="#ubicacion">Ubicación</a></li>
                 <li><a href="#tasas">Tasas de cambio</a></li>
+                <li><a href="#redes-sociales">Redes Sociales</a></li>
             </ul>
         </nav>
     </header>
@@ -43,6 +44,7 @@
        con la educación financiera y la transparencia en cada una de nuestras operaciones, porque creemos que la confianza es la clave para construir relaciones 
        comerciales sólidas con nuestros clientes..</p>
   </div>
+   <a href="#inicio"><button class="boton-estilo">Subir</button></a>
 </section>
 
 
@@ -61,9 +63,10 @@
 </section>
 
 
-        <section class="contacto-ubicacion">
-  <div class="formulario">
-    <h2>Contacto</h2>
+        <section id="contacto-ubicacion">
+  <!-- Punto de anclaje para "Contacto" -->
+  <div id="contacto">
+    <h2>Dejanos tus Datos</h2>
     <form onsubmit="return validarFormulario()">
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" name="nombre" required><br>
@@ -74,18 +77,19 @@
       <label for="mensaje">Mensaje:</label>
       <textarea id="mensaje" name="mensaje" required></textarea><br>
 
-      <button type="submit">Enviar</button>
+      <button type="submit" class="boton-estilo">Enviar</button>
     </form>
   </div>
 
-  <div class="ubicacion">
+  <!-- Punto de anclaje para "Ubicación" -->
+  <div id="ubicacion" style="margin-top: 3rem;">
     <h2>Ubicación</h2>
     <p>Nuestra oficina principal se encuentra en Bogotá, Colombia.</p>
-    <iframe src="https://www.google.com/maps/embed?..." width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
   <a href="#inicio"><button class="boton-estilo">Subir</button></a>
-
 </section>
+
 
         <section id="tasas" class="seccion-tasa">
             <h2>Tasas de Cambio</h2>
@@ -114,8 +118,6 @@
     </a>
   </div>
   <a href="#inicio"><button class="boton-estilo">Subir</button></a>
-
-
 </section>
 
 
