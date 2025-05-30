@@ -1,35 +1,45 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #eceee9;
-  color: #333;
-}
-
 header {
-  background-color: #a6415a;
-  color: rgb(255, 255, 255);
+  background-color: #004080;
+  color: white;
   padding: 1rem;
   text-align: center;
 }
+
+.logo-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: 0.5rem;
+}
+
 
 nav ul {
   list-style: none;
   padding: 0;
   display: flex;
+  flex-wrap: wrap; /* ⬅️ Esto permite que se ajusten en pantallas pequeñas */
   justify-content: center;
+  margin: 0;
   background-color: #0066cc;
 }
 
 nav ul li {
-  margin: 0 1rem;
+  margin: 0.5rem;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 0.9rem;
+  padding: 0.5rem;
 }
+
 
 main {
   padding: 1rem;
