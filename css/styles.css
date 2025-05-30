@@ -70,6 +70,21 @@ input, textarea, button {
   font-size: 1rem;
 }
 
+/* Estilo específico para la sección de tasas */
+.seccion-tasas {
+  text-align: center;
+}
+
+.input-tasa,
+.btn-tasa {
+  max-width: 300px;
+  width: 100%;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+
 .imagen-banner {
   display: block;
   margin:  auto;
