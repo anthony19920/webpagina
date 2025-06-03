@@ -18,29 +18,14 @@ const ARCHIVOS_CACHE = [
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(ARCHIVOS_CACHE);
-    }).catch(err => {
-      console.error('Error cacheando archivos:', err);
-    })
-  );
-});
-
-self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(keys => {
-      return Promise.all(
-        keys.filter(key => key !== CACHE_NAME)
-             .map(key => caches.delete(key))
-      );
-    })
-  );
-});
-
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request).then(res => {
-      return res || fetch(event.request);
+    caches.open(CACHE_NAME).then(async cache => {
+      for (const archivo of ARCHIVOS_CACHE) {
+        try {
+          await cache.add(archivo);
+        } catch (err) {
+          console.error('❌ Falló el archivo:', archivo, err);
+        }
+      }
     })
   );
 });
