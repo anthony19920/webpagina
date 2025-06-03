@@ -1,9 +1,3 @@
-/*if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('dist/servicework.js')
-    .then(reg => console.log('Service Worker registrado'))
-    .catch(err => console.error('Error al registrar SW:', err));
-}
-*/
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
