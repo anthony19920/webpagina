@@ -4,8 +4,6 @@ const ARCHIVOS_CACHE = [
   '/',
   '/index.html',
   '/css/styles.css',
-   '/img/icon-192.png',
-  '/img/startup.png',
   '/img/logo.webp',
   '/img/Facebook.png',
   '/img/instagram.jpg',
