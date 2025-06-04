@@ -1,17 +1,17 @@
 const CACHE_NAME = 'mi-cambio-seguro-v1';
 
 const URLS_TO_CACHE = [
-  './index.html',
-  './css/styles.css',
-  './dist/app.js',
-  './dist/formularios.js',
-  './dist/validacion.js',
-  './img/logo.webp',
-  './img/Facebook.png',
-  './img/instagram.jpg',
-  './img/whatsapp.jpg',
-  './img/money.jpg',
-  './videos/monetizado.mp4'
+  '../index.html',
+  '../css/styles.css',
+  '../img/logo.webp',
+  '../img/Facebook.png',
+  '../img/instagram.jpg',
+  '../img/whatsapp.jpg',
+  '../img/money.jpg',
+  '../videos/monetizado.mp4',
+  './app.js',
+  './formularios.js',
+  './validacion.js'
 ];
 
 
