@@ -229,3 +229,27 @@ input, textarea, button {
   transform: scale(1.2);
 }
 
+@media (max-width: 600px) {
+  .menu-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .menu-principal a {
+    width: 90%;
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  .video-presentacion,
+  .video-tasa {
+    max-width: 100%;
+  }
+}
