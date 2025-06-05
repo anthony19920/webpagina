@@ -1,21 +1,24 @@
 const CACHE_NAME = 'mi-cambio-seguro-v1';
 
-const URLS_TO_CACHE = [
-  '../index.html',
-  '../css/styles.css',
-  '../img/logo.webp',
-  '../img/Facebook.png',
-  '../img/instagram.jpg',
-  '../img/whatsapp.jpg',
-  '../img/money.jpg',
-  '../videos/monetizado.mp4',
-  './app.js',
-  './formularios.js',
-  './validacion.js'
+const ARCHIVOS_CACHE = [
+  '/index.html',
+  '/css/styles.css',
+  '/img/icon-192.png',
+  '/img/startup.png',
+  '/img/logo.webp',
+  '/img/Facebook.png',
+  '/img/instagram.jpg',
+  '/img/whatsapp.jpg',
+  '/img/money.jpg',
+  '/videos/monetizador.mp4',
+  '/dist/app.js',
+  '/dist/formularios.js',
+  '/dist/validacion.js',
+  '/dist/servicework.js',
+  '/manifest.json',
+  '/worker.js'
 ];
 
-
-// Pre-cache inicial
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(async cache => {
@@ -30,7 +33,6 @@ self.addEventListener('install', event => {
   );
 });
 
-// Activación con limpieza de caché viejo
 self.addEventListener('activate', event => {
   async function deleteOldCaches() {
     const names = await caches.keys();
@@ -42,12 +44,10 @@ self.addEventListener('activate', event => {
       })
     );
   }
-
   event.waitUntil(deleteOldCaches());
   self.clients.claim();
 });
 
-// Estrategia de caché dinámico
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request).then(r => {
